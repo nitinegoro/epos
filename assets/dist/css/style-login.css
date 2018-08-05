@@ -1,0 +1,73 @@
+      @font-face {
+          font-family: 'zillap-nitro'; /*a name to be used later*/
+          src: url('zillap-nitro.ttf'); /*URL to font*/
+      }
+      .zillap-nitro {
+        font-family: zillap-nitro, sans-serif;
+        color:#2855B6;
+      }
+/*
+ * Page: Login & Register
+ * ----------------------
+ */
+.login-logo,
+.register-logo {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 15px;
+  font-weight: 300;
+}
+.login-logo a,
+.register-logo a {
+  color: #444;
+}
+.login-page,
+.register-page {
+  background: #d2d6de;
+}
+.login-box,
+.register-box {
+  width: 360px;
+  margin: 3% auto;
+}
+@media (max-width: 768px) {
+  .login-box,
+  .register-box {
+    width: 90%;
+    margin-top: 20px;
+  }
+}
+.login-box-body,
+.register-box-body {
+  background: #fff;
+  padding: 20px;
+  border-top: 0;
+  color: #666;
+}
+.login-box-body .form-control-feedback,
+.register-box-body .form-control-feedback {
+  color: #777;
+}
+.login-box-msg,
+.register-box-msg {
+  margin: 0;
+  text-align: center;
+  padding: 0 20px 20px 20px;
+}
+.social-auth-links {
+  margin: 10px 0;
+}
+
+.alert { font-size: 9pt; }
+
+.btn-primary {
+	font-size: 14pt;
+	border: 0px;
+	padding: 8px;
+	font-weight: bold;
+	background-color: #2855B7;
+    transition: all .2s ease-in-out;
+	-webkit-box-shadow: 2px 5px 5px -2px rgba(0,0,0,0.1);
+	-moz-box-shadow: 2px 5px 5px -2px rgba(0,0,0,0.1);
+	box-shadow: 2px 5px 5px -2px rgba(0,0,0,0.1);
+}

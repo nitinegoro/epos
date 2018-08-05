@@ -1,0 +1,289 @@
+* { font-size: 9pt !important; }
+body { 
+   font-family:'Arial', 'Helvetica', sans-serif; 
+   margin-left:3%; 
+   margin-right: 3%;   
+   margin-top: 3%;
+   color: #444;
+}
+a {
+  color: green
+}
+.prit-at {
+text-align: left;
+position: fixed;
+bottom: 0;
+left:0
+}
+@media(min-width:965px){
+    div.content-wrap {
+        width:700px;
+        margin: 0px auto;
+    }
+}
+@media print {
+  .hidden-print {
+     display: none !important;
+  }
+}
+h5.upper { margin: 2px; }
+.upper { text-transform: uppercase;  }
+.underline { text-decoration: underline; }
+.bold { font-weight:bold; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+
+.header { 
+   width:100%; 
+   height:10%; 
+   font-weight:500; 
+   margin-bottom: 3%;  
+}
+table.mini-font { 
+  vertical-align:center;
+   font-size: 8pt;
+}
+table.mini-font thead th,
+table.mini-font tbody td,
+table.mini-font tbody th,
+table.mini-font tbody td span,
+table.mini-font tbody td strong,
+table.mini-font tfoot td {  
+   font-size: 8pt;
+   vertical-align: middle;
+}
+table.kop {
+   width: 100%;
+   margin-bottom: 30px;
+}
+
+td > span.kop-heading {
+   font-weight: 600;
+   text-align: right;
+   font-size: 18px;
+   line-height: 1.4;
+   text-transform: uppercase;
+   letter-spacing:2px;
+   color: #196B33
+}
+
+td > span.kop-heading-company {
+   font-weight: bold;
+   font-size: 19px;
+   line-height: 1.4;
+   text-transform: uppercase;
+   letter-spacing:3px;
+}
+
+td > span.kop-heading-address {
+   font-weight: 400;
+   font-size: 11px;
+   text-align: center;
+   line-height: 1.3em;
+   letter-spacing:1px;
+}
+
+img.logo {
+   height: auto;
+}
+p.description-work {
+  padding: 15px;
+  border:#E9EAEC 1px solid;
+}
+h5 { 
+   color: black;
+   height:0px;
+}
+
+div.hr-small {
+   margin-top:3px;
+   width: 100%;
+   border-bottom: 0.8px solid black;
+}
+
+strong.head {
+  font-weight: bold;
+  font-size: 13pt;
+}
+.bg-gray-round {
+  background-color: #F0F1F2;
+  border-radius: 10px;
+  padding: 20px;
+  height: 90px;
+}
+table.table-bordered { 
+   border-width: 0; 
+   border-color: #E9EAEC; 
+   border-collapse: collapse; 
+   margin-top: 30px;
+   font-size: 9pt !important;
+}
+table.table-bordered tr th,
+table.table-bordered thead tr th {  
+   border-width: 0.1px; 
+   padding: 6px; 
+   border-style: solid; 
+   text-transform: none; 
+   vertical-align: middle;
+   background: #337AB7;
+   color: white;
+   border-color: #337AB7;
+}
+table.table-bordered tbody > tr:last-child  {
+  border-bottom: 1px solid #CBCBC9;
+}
+table.table-bordered tfoot > tr  {
+  border-bottom: 1px solid #CBCBC9;
+}
+table.table-bordered td,
+table.table-bordered tr td,
+table.table-bordered tbody tr td { 
+  border-width: 0px;
+   border-top: 0px; 
+   border-left: 0px;
+   border-right: 0px;
+   padding: 7px 7px 7px 7px; 
+   border-style: solid; 
+   border-color: #CBCBC9; 
+}
+
+table.table-kw td,
+table.table-kw tr td,
+table.table-bordered tbody tr td { 
+  border-bottom: 1px solid #CBCBC9;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.content { 
+   font-family:'Arial', sans-serif; 
+   margin-top:30px;
+}
+
+small.print-at {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+    
+}
+
+/* SURAT */
+
+.mail-heading {
+    width: 100%;
+    height: auto;
+    text-align: center;
+   display: inline-block;
+   text-align: center;
+   margin-bottom: 20px;
+}
+
+.mail-heading > h5.mail-name {
+   font-size: 10pt;
+   line-height: 1px;
+   padding-bottom: 13.5px;
+   width: auto;
+   display: inherit; 
+   width: 100%;
+}
+
+.mail-heading > h5.mail-number {
+   font-size: 9pt;
+   margin-top: 10px;
+   display: inherit; 
+}
+
+div.mail-content,
+div.mail-footer {
+   font-size: 13px;
+   margin-top: 50px;
+   display: inline;
+}
+
+div.mail-content > p {
+   letter-spacing: 0.7px;
+   word-spacing: auto;
+   line-height: 1.5em;
+   text-align: justify;
+}
+
+div.mail-content > p.indent {
+   text-indent: 40px;
+}
+
+ul > li,
+ol > li {
+   margin-top: 10px;
+   margin-bottom:10px;
+}
+ul.italic {
+  font-style: italic;
+}
+ul>li {
+  line-height: 0.5em;
+}
+
+ul > li > p,
+ul > li > table,
+ol > li > p,
+ol > li > table {
+   line-height: 1.5em;
+   margin-top: 0px;
+   margin-bottom:0px;
+}
+ol > li > table,
+ul > li > table {
+   margin-left:-3px;
+}
+
+
+/* FOOTER MAIL */
+
+div.mail-footer > table {
+   margin-top: 50px;
+}
+
+
+#header,
+#footer {
+  position: fixed;
+  left: 0;
+   right: 0;
+   color: #aaa;
+   font-size: 0.9em;
+}
+
+#header {
+  top: 0;
+}
+
+#footer {
+  bottom: 0;
+  border-top: 0.1pt solid #aaa;
+}
+
+#header table,
+#footer table {
+   width: 100%;
+   border-collapse: collapse;
+   border: none;
+}
+
+#header td,
+#footer td {
+  padding: 0;
+   width: 50%;
+}
+
+.page-number {
+  text-align: center;
+}
+
+.page-number:before {
+  content: "Page " counter(page);
+}
+
+hr, .pagebreak {
+  page-break-after: always;
+  border: 0;
+}
