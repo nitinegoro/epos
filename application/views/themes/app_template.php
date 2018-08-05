@@ -162,13 +162,11 @@
     <script src="<?php echo base_url('assets/plugins/datatables/dataTables.bootstrap.min.js'); ?>"></script>
     <script src="<?php echo base_url('assets/plugins/daterangepicker/moment.min.js'); ?>"></script>
     <script src="<?php echo base_url('assets/plugins/daterangepicker/daterangepicker.js'); ?>"></script>
-    <script src="<?php echo base_url('assets/plugins/select2/select2.full.min.js'); ?>"></script>
-    <script src="<?php echo base_url('assets/plugins/morris/raphael-min.js'); ?>"></script>
-    <script src="<?php echo base_url('assets/plugins/morris/morris.min.js'); ?>"></script>
     <script src="<?php echo base_url('assets/dist/js/jquery.tableCheckbox.js') ?>"></script>
     <script src="<?php echo base_url("assets/plugins/bootstrap-switch/js/bootstrap-switch.min.js"); ?>"></script>
     <script src="<?php echo base_url("assets/plugins/mask-money/jquery.maskMoney.min.js"); ?>"></script>
     <script src="<?php echo base_url("assets/dist/js/jquery.printPage.js"); ?>"></script>
+    <script src="<?php echo base_url("assets/dist/js/app.js"); ?>"></script>
     <script type="text/javascript">var base_domain = '<?php echo site_url(); ?>';</script>
     <?php 
     /**
