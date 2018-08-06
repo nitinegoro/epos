@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="<?php echo base_url('assets/plugins/daterangepicker/daterangepicker-bs3.css'); ?>">
     <link rel="stylesheet" href="<?php echo base_url("assets/plugins/bootstrap-switch/css/bootstrap-switch.min.css"); ?>">
     <link rel="stylesheet" href="<?php echo base_url("assets/plugins/bootstrap-checkbox/awesome-bootstrap-checkbox.min.css"); ?>">
+    <link rel="shortcut icon" href="<?php echo base_url("assets/favicon.png"); ?>" type="image/x-icon">
+    <link rel="icon" href="<?php echo base_url("assets/favicon.png"); ?>" type="image/x-icon">
     <style type="text/css">
     .img-logo { width:50px; height:50px; margin-top:10px; }
     .app-info { color:white; margin-left:60px; }
@@ -182,7 +184,6 @@
       endforeach; 
     endif; 
     ?>
-    <script src="<?php echo base_url('assets/js_app/app_setting.js?v='.md5(date('ymdHis'))) ?>"></script>
     <!--  </body></html> -->
   </body>
 </html>

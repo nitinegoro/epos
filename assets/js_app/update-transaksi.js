@@ -80,7 +80,7 @@ $(document).ready(function()
 	    return false;
 	});
 
-	$('#kode_barang').on('change keyup', function() 
+	$('#kode_barang').on('change', function() 
 	{
 		if ($(this).val().length > 5) 
 		{ 

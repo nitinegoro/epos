@@ -31,6 +31,28 @@ class Mtransaction extends CI_Model
 		}
 	}
 
+	public function getallByUser($from = NULL, $to = NULL, $kasir = 0, $type = 'result')
+	{
+		$this->db->select('tb_transaction.*, users.name, (SELECT SUM(price*quantity) FROM tb_detail_transaction WHERE ID_transaction = tb_transaction.ID_transaction ) AS total');
+
+		$this->db->join('users', 'tb_transaction.user_id = users.id', 'left');
+
+		$this->db->where('DATE(date) >= ', $from);
+
+		$this->db->where('DATE(date) <= ', $to);
+
+		$this->db->where('tb_transaction.user_id', $kasir);
+
+		$this->db->order_by('date', 'desc');
+
+		if( $type == 'num' )
+		{
+			return $this->db->get('tb_transaction')->num_rows();
+		} else {
+			return $this->db->get('tb_transaction')->result();
+		}
+	}
+
 	public function get($param = 0)
 	{
 		$this->db->where('ID_transaction', $param);

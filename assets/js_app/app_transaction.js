@@ -136,7 +136,7 @@
         audio.play();
     }
 
-$('#kode_barang').on('change keyup', function() {
+$('#kode_barang').on('change', function() {
 	if ($(this).val().length > 5) { 
         $.ajax({
         	url: base_domain + '/transaksi/get_data/' + $(this).val(), 

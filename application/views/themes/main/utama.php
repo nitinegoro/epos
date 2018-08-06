@@ -1,4 +1,14 @@
- <?php $enddate= date('Y-m-d', strtotime("-1 days", strtotime(date('Y-m-d'))));?>
+ <?php 
+
+ $enddate= date('Y-m-d', strtotime("-1 days", strtotime(date('Y-m-d'))));
+
+    $dataTransaksi =  $this->mtransaction->getallByUser(date('Y-m-d'), date('Y-m-d'), $this->account->id,'result');
+ 
+        $grandtotal = 0;
+        foreach($dataTransaksi as $row) 
+          $grandtotal += $row->total;
+
+ ?>
 <div class="row">
   <div class="col-md-6">
     <div class="box box-primary">
@@ -41,9 +51,9 @@
         <span class="info-box-icon"><i class="ion ion-arrow-graph-up-right"></i></span>
         <div class="info-box-content">
           <span class="info-box-text">Penjualan Hari ini</span>
-          <span class="info-box-number">Rp. <?php echo number_format($this->mtransaction->profit()) ?></span>
+          <span class="info-box-number">Rp. <?php echo number_format( $grandtotal) ?></span>
           <div class="progress"><div class="progress-bar" style="width: 100%"></div></div>
-          <span class="progress-description"><?php echo $this->mtransaction->count(); ?> Transaksi</span>
+          <span class="progress-description"><?php echo @count(@$dataTransaksi); ?> Transaksi</span>
         </div><!-- /.info-box-content -->
       </div><!-- /.info-box -->
     </div>
@@ -64,9 +74,32 @@
         <div class="icon"><i class="ion ion-bag"></i></div>
       </div>
     </div><!-- ./col -->
+    <?php  
+    /* HITUNG SALDO */
+
+
+        $debit = 0;
+        $kredit = 0;
+        $saldo = 0;
+        foreach($this->cash_balance->getByDate(date('Y-m-d')) as $key => $row)
+        {
+            if($row->mutation=='masuk')  
+                $debit += $row->amount;
+
+            if($row->mutation=='keluar')  
+                $kredit += $row->amount;
+
+            $saldo = ($debit-$kredit);
+        }
+
+        $debit += $grandtotal;
+
+        $saldo = ($debit-$kredit);
+    ?>
+
     <div class="col-lg-6 col-xs-6">
       <div class="small-box bg-blue">
-        <div class="inner"><h3>34</h3><p>Kas Hari ini</p>
+        <div class="inner"><h3> Rp. <?php echo number_format($saldo) ?></h3><p>Kas Hari ini</p>
         </div>
         <div class="icon"><i class="fa fa-money"></i></div>
       </div>

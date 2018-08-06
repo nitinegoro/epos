@@ -3,17 +3,25 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Cash_balance extends CI_Model 
 {
+	public $account;
+
 	public function __construct()
 	{
 		parent::__construct();
-		//Do your magic here
+		
+		$this->load->library(array('ion_auth'));
+
+		$this->account = $this->ion_auth->user()->row();
 	}
 
 	public function getByDate($date = NULL, $mutation = NULL)
 	{
 		$this->db->where('DATE(date)', $date);
 
-		$this->db->where('mutation', $mutation);
+		if($mutation != NULL)
+			$this->db->where('mutation', $mutation);
+
+		$this->db->where('user_id', $this->account->id);
 
 		return $this->db->get('cash_balance')->result();
 	}
@@ -23,6 +31,8 @@ class Cash_balance extends CI_Model
 		$this->db->where('DATE(date) >= ', $start);
 
 		$this->db->where('DATE(date) <= ', $end);
+
+		$this->db->where('user_id', $this->input->get('kasir'));
 
 		return $this->db->get('cash_balance')->result();
 	}

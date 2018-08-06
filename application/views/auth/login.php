@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="<?php echo base_url('assets/font-awesome/css/font-awesome.min.css') ?>">
   <link rel="stylesheet" href="<?php echo base_url('assets/dist/css/style-login.css') ?>">
   <link rel="stylesheet" href="<?php echo base_url('assets/plugins/iCheck/square/blue.css') ?>">
+    <link rel="shortcut icon" href="<?php echo base_url("assets/favicon.png"); ?>" type="image/x-icon">
+    <link rel="icon" href="<?php echo base_url("assets/favicon.png"); ?>" type="image/x-icon">
 </head>
 <body class="hold-transition login-page">
 <div class="login-box">
